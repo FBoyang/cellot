@@ -158,7 +158,7 @@ def train_cellot(outdir, config):
         if step % config.training.cache_freq == 0:
             torch.save(state_dict(f, g, opts, step=step), cachedir / "last.pt")
 
-            logger.flush()
+            # logger.flush()
 
     torch.save(state_dict(f, g, opts, step=step), cachedir / "last.pt")
 
